@@ -14,7 +14,7 @@ Currently in beta testing. You can install it manually using the manifest link:
 1. Open Foundry VTT and go to the **Add-on Modules** tab.
 2. Click **Install Module**.
 3. Paste the following link into the **Manifest URL** field at the bottom:
-   `https://raw.githubusercontent.com/SENIN_KULLANICI_ADIN/universal-donjon-importer/main/module.json` *(Not: Burayı kendi GitHub linkinle değiştirmeyi unutma)*
+   `https://raw.githubusercontent.com/keremkceylan/Universal-Donjon-Importer/main/module.json`
 4. Click **Install**.
 
 ## 🛠️ How to Use
