@@ -28,6 +28,12 @@ Currently in beta testing. You can install it manually using the manifest link:
 7. Select your JSON file. 
 8. **Alignment Tip:** Donjon exports are usually `50px` per square. If your walls don't align perfectly due to Foundry's scene padding, use the **Manual Offset X & Y** fields (e.g., trying `300` for both often perfectly aligns with default padding).
 
+### ⚠️ Known Limitations & Tips
+
+* **Non-Rectangular Rooms (Room Polymorph):** The JSON data exported by Donjon only contains rectangular bounding boxes for rooms. If your Donjon map includes circular, octagonal, or diagonal rooms (often caused by the "Room Polymorph" or layout settings on Donjon), the JSON data will still tell this module to draw a large rectangular wall around them.
+* **The Solution:** For a 100% perfect automatic import, we highly recommend setting **Room Polymorph** to **"No"** when generating your map on Donjon. 
+* **Manual Adjustment:** If you prefer to keep the rounded/diagonal rooms for aesthetics, you can still use this module to do 90% of the heavy lifting. Once the import is complete, simply grab the Wall Tool in Foundry, delete the oversized square walls around those specific rooms, and manually draw the curves to match the background image.
+
 ## 🐛 Feedback & Contribution
 Feedback and bug reports are highly appreciated! Please open an issue on GitHub if you encounter any misaligned walls or unrecognized door types. 
 
