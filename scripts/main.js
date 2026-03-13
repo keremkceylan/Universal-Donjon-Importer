@@ -1,17 +1,35 @@
 // 1. UI: Add our module's button to the left menu
 Hooks.on('getSceneControlButtons', (controls) => {
-    if (!game.user.isGM) return;
+    let wallControls;
+    
+    
+    if (Array.isArray(controls)) {
+        // V11 and V12 (List/Array)
+        wallControls = controls.find(c => c.name === "walls");
+    } else {
+        // V13 (Dictionary/Object)
+        wallControls = controls.walls || controls["walls"];
+    }
 
-    const wallControls = controls.find(c => c.name === "walls");
-    if (wallControls) {
-        wallControls.tools.push({
-            name: "import-donjon",
-            title: "Import Donjon Map",
-            icon: "icon-donjon-custom", 
-            visible: true, 
-            button: true,
-            onClick: () => openImporterDialog()
-        });
+    if (!wallControls) return;
+
+    
+    const importTool = {
+        name: "import-donjon",
+        title: "Import Donjon Map",
+        icon: "fas icon-donjon-custom", 
+        visible: game.user ? game.user.isGM : true, 
+        button: true,
+        onClick: () => openImporterDialog()
+    };
+
+    
+    if (Array.isArray(wallControls.tools)) {
+        
+        wallControls.tools.push(importTool);
+    } else if (wallControls.tools) {
+        
+        wallControls.tools["import-donjon"] = importTool;
     }
 });
 
