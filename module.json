@@ -2,7 +2,7 @@
   "id": "universal-donjon-importer",
   "title": "Universal Donjon Importer",
   "description": "Imports map walls and doors directly from Donjon JSON files.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "compatibility": {
     "minimum": "11",
     "verified": "13"
@@ -15,6 +15,9 @@
   ],
   "scripts": [
     "scripts/main.js"
+  ],
+  "styles": [
+    "css/style.css"
   ],
   "manifest": "https://raw.githubusercontent.com/keremkceylan/Universal-Donjon-Importer/main/module.json",
   "download": "https://github.com/keremkceylan/Universal-Donjon-Importer/releases/latest/download/module.zip"

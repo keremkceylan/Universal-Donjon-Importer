@@ -7,7 +7,7 @@ Hooks.on('getSceneControlButtons', (controls) => {
         wallControls.tools.push({
             name: "import-donjon",
             title: "Import Donjon Map",
-            icon: "fas fa-dungeon", 
+            icon: "icon-donjon-custom", 
             visible: true, 
             button: true,
             onClick: () => openImporterDialog()

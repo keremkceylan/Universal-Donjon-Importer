@@ -1,0 +1,10 @@
+.icon-donjon-custom {
+    background-image: url('../assets/donjon-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 24px; 
+    height: 24px;
+    vertical-align: middle;
+}
